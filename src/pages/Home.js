@@ -1,25 +1,25 @@
 import React from 'react';
 import BeforeFooter from '../Components/BeforeFooter/BeforeFooter';
 import Blog from '../Components/Blog/Blog';
-import Footer from '../Components/Footer/Footer';
-import HeroSection from '../Components/HeroSection/HeroSection';
-import NavBar from '../Components/NavBar/NavBar';
 import News from '../Components/News/News';
 import Service from '../Components/Service/Service';
 
 const Home = () => {
-    return (
-        <>
-            <NavBar />
-            <HeroSection />
-            <Service />
-            <Blog />
-            <News />
-            <BeforeFooter />
-            <Footer />
-
-        </>
-    );
+	return (
+		<>
+			<div>
+                <h3 className='text-center font-bold text-xl'>
+                    Building the metaverse <br />
+                    We’re already developing exciting new technologies that will <br />
+                    help people connect and explore in the metaverse.
+                </h3>
+            </div>
+			<Service />
+			<Blog />
+			<News />
+			<BeforeFooter />
+		</>
+	);
 };
 
 export default Home;
