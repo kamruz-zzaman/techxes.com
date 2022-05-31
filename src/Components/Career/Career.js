@@ -2,7 +2,28 @@ import React from 'react';
 import UiUxIcon from '../../assets/icon/ui.png'
 import HrIcon from '../../assets/icon/hr.png'
 import DevIcon from '../../assets/icon/dev.png'
+import axios from 'axios';
+import swal from 'sweetalert';
 const Career = () => {
+    const handleCareerForm = (e) => {
+        e.preventDefault()
+        const data = {
+            "data": {
+                "Name": e.target.Name.value,
+                "mail": e.target.mail.value,
+                "position": e.target.position.value,
+                "phone": e.target.phone.value,
+            }
+        }
+        axios.post('https://techxes.herokuapp.com/api/careers', data)
+            .then(res => {
+                swal("Done!", "Your application is submitted!", "success");
+                e.target.reset()
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }
     return (
         <>
             <div className='text-center font-semibold text-4xl mt-10 mb-20'>
@@ -38,15 +59,15 @@ const Career = () => {
                     <div className='mt-16 mb-20'>
                         <p className='text-center'>And More than job available</p>
                     </div>
-                    <form action="">
+                    <form onSubmit={handleCareerForm}>
                         <p className='text-center mb-10'>Join  Company</p>
                         <div className='flex justify-center'>
                             <div className=''>
-                                <input className='bg-transparent border-2 border-white px-3 py-2 text-white mb-6 rounded-lg w-80 md:w-96' type="text" placeholder='Name' /><br />
-                                <input className='bg-transparent border-2 border-white px-3 py-2 text-white mb-6 rounded-lg w-80 md:w-96' type="email" placeholder='Gmail ID' /><br />
-                                <input className='bg-transparent border-2 border-white px-3 py-2 text-white mb-6 rounded-lg w-80 md:w-96' type="tel" placeholder='Phone Number' /><br />
+                                <input name='Name' className='bg-transparent border-2 border-white px-3 py-2 text-white mb-6 rounded-lg w-80 md:w-96' type="text" placeholder='Name' /><br />
+                                <input name='mail' className='bg-transparent border-2 border-white px-3 py-2 text-white mb-6 rounded-lg w-80 md:w-96' type="email" placeholder='Gmail ID' /><br />
+                                <input name='phone' className='bg-transparent border-2 border-white px-3 py-2 text-white mb-6 rounded-lg w-80 md:w-96' type="tel" placeholder='Phone Number' /><br />
                                 <div className='flex justify-center mb-6'>
-                                    <select className='text-black font-semibold py-2 px-3 rounded-lg' name="" id="">
+                                    <select className='text-black font-semibold py-2 px-3 rounded-lg' name="position" id="">
                                         <option>UI UX</option>
                                         <option>Hr</option>
                                         <option>Developers</option>
