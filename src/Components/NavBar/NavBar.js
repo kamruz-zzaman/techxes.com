@@ -12,7 +12,7 @@ function classNames(...classes) {
 export default function Example() {
 	const [navigation, setNavigation] = React.useState([
 		{ name: 'Home', href: '/', current: true },
-		{ name: 'Blog', href: '/blog', current: false },
+		{ name: 'Blog', href: '/blogs', current: false },
 		{ name: 'Services', href: '/services', current: false },
 		{ name: 'Careers', href: '/careers', current: false },
 	]);
