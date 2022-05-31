@@ -44,8 +44,8 @@ const News = () => {
                             Set your businesses <br /> growth on Techxes.
                         </h1>
                         <div>
-                            <div class="flex w-96 mr-2">
-                                <input placeholder='Your Email address' type="text" id="footer-field" name="footer-field" class="w-full bg-gray-100 bg-opacity-50 rounded-l placeholder:text-black placeholder:font-medium border-0 focus:ring-2 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                            <div className="flex w-96 mr-2">
+                                <input placeholder='Your Email address' type="text" id="footer-field" name="footer-field" className="w-full bg-gray-100 bg-opacity-50 rounded-l placeholder:text-black placeholder:font-medium border-0 focus:ring-2 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                                 <button className='bg-indigo-500 rounded-r-md px-4  text-white'>SUBSCRIBE</button>
                             </div>
                         </div>
