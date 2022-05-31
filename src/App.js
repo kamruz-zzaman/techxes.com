@@ -5,6 +5,7 @@ import HeroSection from './Components/HeroSection/HeroSection';
 import NavBar from './Components/NavBar/NavBar';
 import Blogs from './pages/Blogs';
 import Home from './pages/Home';
+import Services from './pages/Services';
 function App() {
 	return (
 		<BrowserRouter>
@@ -13,6 +14,7 @@ function App() {
 			<Routes>
 				<Route path='/' element={<Home />} />
 				<Route path='/blogs' element={<Blogs />} />
+				<Route path='/service' element={<Services />} />
 				<Route
 					path='*'
 					element={
