@@ -10,7 +10,7 @@ import service3 from '../../assets/services/service3.png'
 const Service = () => {
     return (
         <>
-            <section className='mx-20 my-24'>
+            <section className='mx-10 md:mx-20 my-24'>
                 <h2 className='text-center text-4xl font-bold'>Services</h2>
                 <div className='grid sm:grid-cols-1 md:grid-cols-3 gap-10 mt-5'>
                     <div >
@@ -48,7 +48,7 @@ const Service = () => {
                     </div>
                 </div>
             </section>
-            <section className='mx-20 mt-52'>
+            <section className='mx-10 md:mx-20 mt-52'>
                 <div className='flex justify-start items-center flex-wrap'>
                     <div>
                         <img width="329px" height="294px" src={service1} alt="" />

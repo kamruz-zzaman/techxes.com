@@ -13,7 +13,7 @@ const Blog = () => {
             <div>
                 <h1 className='text-3xl text-center mb-10 font-bold'>Blog</h1>
             </div>
-            <div className='flex mx-20'>
+            <div className='flex mx-10 md:mx-20'>
                 <div>
                     <div className='flex'>
                         <div className='mt-10 md:mt-44 flex justify-end'>
