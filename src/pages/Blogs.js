@@ -1,5 +1,6 @@
 import React from 'react';
 import BlogItem from '../Components/Blog/BlogItem';
+import NewsItem from '../Components/Blog/NewsItem';
 
 const Blogs = () => {
 	return (
@@ -34,6 +35,16 @@ const Blogs = () => {
 			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 gap-10'>
 				{[1, 2, 3, 4,5,6].map(item => (
 					<BlogItem />
+				))}
+			</div>
+			<h2 className='mt-32'>
+				<span className='border-b-2 uppercase border-blue-500 text-4xl font-medium'>
+					News
+				</span>
+			</h2>
+			<div className='grid grid-cols-1 md:grid-cols-2 mt-8 gap-10'>
+				{[1, 2, 3, 4,5,6].map(item => (
+					<NewsItem />
 				))}
 			</div>
 		</div>
