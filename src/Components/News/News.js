@@ -5,6 +5,7 @@ import blog3 from '../../assets/News/news3.png'
 import blog4 from '../../assets/News/news4.png'
 import erroIcon from '../../assets/icon/erroIcon.png'
 import './news.css'
+import { Link } from 'react-router-dom';
 const News = () => {
     return (
         <>
@@ -32,7 +33,7 @@ const News = () => {
                 </div>
                 <div className='w-2/4 mx-auto my-10'>
                     <div className='flex justify-center md:ml-28'>
-                        <button className='flex items-center text-gray-600 font-bold text-xl'>See More Blog <img width="20%" src={erroIcon} alt="" /></button>
+                        <Link to="/blogs" className='flex items-center text-gray-600 font-bold text-xl'>See More News <img width="20%" src={erroIcon} alt="" /></Link>
                     </div>
                 </div>
             </section>

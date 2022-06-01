@@ -13,7 +13,7 @@ export default function Example() {
 	const [navigation, setNavigation] = React.useState([
 		{ name: 'Home', href: '/', current: true },
 		{ name: 'Blog', href: '/blogs', current: false },
-		{ name: 'Services', href: '/service', current: false },
+		{ name: 'Services', href: '/services', current: false },
 		{ name: 'Careers', href: '/career', current: false },
 	]);
 	return (
