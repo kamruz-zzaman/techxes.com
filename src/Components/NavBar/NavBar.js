@@ -3,19 +3,21 @@ import React, { Fragment } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import DropDownIcon from '../../assets/icon/Polygon 1.svg';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function classNames(...classes) {
 	return classes.filter(Boolean).join(' ');
 }
 
 export default function Example() {
-	const [navigation, setNavigation] = React.useState([
+	// get router pathname using react-router-dom
+	const { pathname } = useLocation();
+	const navigation = [
 		{ name: 'Home', href: '/', current: true },
 		{ name: 'Blog', href: '/blogs', current: false },
 		{ name: 'Services', href: '/services', current: false },
 		{ name: 'Careers', href: '/career', current: false },
-	]);
+	];
 	return (
 		<Disclosure as='nav' className='bg-transparent absolute z-50 w-full '>
 			{({ open }) => (
@@ -52,18 +54,8 @@ export default function Example() {
 											<Link
 												key={item.name}
 												to={item.href}
-												onClick={() => {
-													const updated = navigation.map(i => {
-														if (i.name === item.name) {
-															return { ...i, current: true };
-														} else {
-															return { ...i, current: false };
-														}
-													});
-													setNavigation(updated);
-												}}
 												className={classNames(
-													item.current
+													item.href === pathname
 														? 'border-b-2 '
 														: 'text-gray-800 hover:border-b-2',
 													'px-3 py-2 text-sm font-medium border-indigo-500 border-b-blue-500'
@@ -160,10 +152,12 @@ export default function Example() {
 									{item.name}
 								</Disclosure.Button>
 							))}
-							<select className='px-3 py-2' name="" id="">
-								<option value="" selected>Support</option>
-								<option value="">Button</option>
-								<option value="">Button</option>
+							<select className='px-3 py-2' name='' id=''>
+								<option value='' selected>
+									Support
+								</option>
+								<option value=''>Button</option>
+								<option value=''>Button</option>
 							</select>
 						</div>
 					</Disclosure.Panel>
