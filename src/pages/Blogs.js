@@ -34,14 +34,14 @@ const Blogs = () => {
 				{
 					data.length === 0 ? <></> :
 						<>
-							<Link to={`/blog/${data[0].id}`}>
+							<Link to={`/blog/${data[0].id}`} className='flex'>
 								<div
 									className='w-[65%] h-[530px] bg-center bg-cover bg-no-repeat'
 									style={{
 										backgroundImage: `url("${data[0].attributes.image.data.attributes.formats.large.url}")`,
 									}}></div>
 								<div className='p-6 w-[35%] flex flex-col'>
-									<p className='uppercase font-bold text-gray-400'>Press Release</p>
+									<p className='uppercase font-bold mb-8 text-gray-400'>Press Release</p>
 									<h3 className='font-medium text-3xl'>
 										{data[0].attributes.title}
 									</h3>
