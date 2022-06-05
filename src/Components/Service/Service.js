@@ -10,32 +10,32 @@ const Service = () => {
 				setData(res.data.data);
 			});
 	}, []);
-	
+
 	return (
 		<>
 			<section className='mx-10 md:mx-20 my-24'>
 				<h2 className='text-center text-4xl font-bold'>Services</h2>
 				<div className='grid sm:grid-cols-1 md:grid-cols-3 gap-10 mt-5'>
 					{data?.map((item, i) => {
-                        if(i < 3){
-                            return(
-                                <div>
-								<div className='mb-5'>
-									<img
-										width='78px'
-										src={item.attributes.icon.data.attributes.url}
-										alt=''
-									/>
-								</div>
+						if (i < 3) {
+							return (
 								<div>
-									<p className='text-xl font-bold'>
-										{item.attributes.title} <br />
-										<br />
-										{item.attributes.short_description}
-									</p>
+									<div className='mb-5'>
+										<img
+											width='78px'
+											src={item.attributes.icon.data.attributes.url}
+											alt=''
+										/>
+									</div>
+									<div>
+										<p className='text-xl font-bold'>
+											{item.attributes.title} <br />
+											<br />
+											{item.attributes.short_description}
+										</p>
+									</div>
 								</div>
-							</div>
-                            )
+							)
 						}
 						return null;
 					})}
@@ -46,8 +46,8 @@ const Service = () => {
 					<div>
 						<img width='329px' height='294px' src={data[0]?.attributes.image.data.attributes.url} alt='' />
 					</div>
-					<div className='md:ml-10'>
-						<p className='text-xl font-bold w-[350px]'>
+					<div className='md:ml-10 mt-5'>
+						<p className='text-xl font-bold md:w-[350px]'>
 							{data[0]?.attributes.title} <br />
 							<br />
 							{data[0]?.attributes.short_description}
@@ -55,8 +55,8 @@ const Service = () => {
 					</div>
 				</div>
 				<div className='flex justify-end flex-wrap-reverse items-center my-28'>
-					<div className='md:mr-10'>
-					<p className='text-xl font-bold w-[350px]'>
+					<div className='md:mr-10 mt-5'>
+						<p className='text-xl font-bold md:w-[350px]'>
 							{data[1]?.attributes.title} <br />
 							<br />
 							{data[1]?.attributes.short_description}
@@ -70,8 +70,8 @@ const Service = () => {
 					<div>
 						<img width='329px' height='294px' src={data[2]?.attributes.image.data.attributes.url} alt='' />
 					</div>
-					<div className='md:ml-10'>
-					<p className='text-xl font-bold w-[350px]'>
+					<div className='md:ml-10 mt-5'>
+						<p className='text-xl font-bold md:w-[350px]'>
 							{data[2]?.attributes.title} <br />
 							<br />
 							{data[2]?.attributes.short_description}

@@ -70,7 +70,7 @@ const Footer = () => {
                             <p className='mx-5 text-gray-800'>Terms</p>
                             <p className='mx-5 text-gray-800'>Cookie Policy</p>
                         </div>
-                        <p className='text-gray-800 font-bold' >Language English (US)</p>
+                        <p className='text-gray-800 font-bold text-center' >Language English (US)</p>
                     </div>
                 </div>
             </footer>
