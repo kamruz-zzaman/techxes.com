@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -63,12 +64,12 @@ const Footer = () => {
                 <div className="bg-gray-100">
                     <div className="container mx-auto py-4 px-5 flex flex-wrap justify-between flex-col sm:flex-row">
                         <div className='flex flex-wrap flex-col sm:flex-row text-center font-bold'>
-                            <p className='text-gray-800'>©2022 Name All Rights Reserved.
+                            <p className='text-gray-800'>©2022 Techxes All Rights Reserved.
                             </p>
                             <p className='mx-5 text-gray-800'>Community Standards</p>
                             <p className='mx-5 text-gray-800'>Data Policy</p>
-                            <p className='mx-5 text-gray-800'>Terms</p>
-                            <p className='mx-5 text-gray-800'>Cookie Policy</p>
+                            <Link to={"terms_of_service"}><p className='mx-5 text-gray-800'>Terms</p></Link>
+                            <Link to={"cookie_policy"}><p className='mx-5 text-gray-800'>Cookie Policy</p></Link>
                         </div>
                         <p className='text-gray-800 font-bold text-center' >Language English (US)</p>
                     </div>

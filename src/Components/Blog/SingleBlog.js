@@ -58,7 +58,7 @@ const SingleBlog = () => {
                             <img src={data.attributes.image.data.attributes.formats.large.url} alt="" />
                         </div>
                         <div className='container '>
-                            <p className='px-32 text-xl font-semibold leading-10'>{data.attributes.description}</p>
+                            <p className='md:px-32 text-xl font-semibold leading-10'>{data.attributes.description}</p>
                         </div>
                     </>
             }

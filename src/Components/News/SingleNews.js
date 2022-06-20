@@ -58,7 +58,7 @@ const SingleNews = () => {
                             <img src={data.attributes.Image.data.attributes.formats.large.url} alt="" />
                         </div>
                         <div className='container '>
-                            <p className='px-32 text-xl font-semibold leading-10'>{data.attributes.Description}</p>
+                            <p className='md:px-32 text-xl font-semibold leading-10'>{data.attributes.Description}</p>
                         </div>
                     </>
             }

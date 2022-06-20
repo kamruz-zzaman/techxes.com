@@ -7,7 +7,9 @@ import HeroSection from './Components/HeroSection/HeroSection';
 import NavBar from './Components/NavBar/NavBar';
 import SingleNews from './Components/News/SingleNews';
 import SingleService from './Components/Service/SingleService';
+import TermsOfService from './Components/TermsofService/TermsOfService';
 import Blogs from './pages/Blogs';
+import CookiePolicy from './pages/CookiePolicy';
 import Home from './pages/Home';
 import Services from './pages/Services';
 function App() {
@@ -23,6 +25,8 @@ function App() {
 				<Route path='/blog/:id' element={<SingleBlog />} />
 				<Route path='/news/:id' element={<SingleNews />} />
 				<Route path='/service/:id' element={<SingleService />} />
+				<Route path='/terms_of_service' element={<TermsOfService />} />
+				<Route path='/cookie_policy' element={<CookiePolicy />} />
 
 				<Route
 					path='*'

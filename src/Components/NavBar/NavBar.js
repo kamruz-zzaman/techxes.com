@@ -36,16 +36,18 @@ export default function Example() {
 								</Disclosure.Button>
 							</div>
 							<div className='flex-shrink-0 flex items-center'>
-								<img
-									className='block lg:hidden h-8 w-auto'
-									src='/logo.png'
-									alt='Workflow'
-								/>
-								<img
-									className='hidden lg:block h-10 w-auto'
-									src='/logo.png'
-									alt='Workflow'
-								/>
+								<Link to={"/"}>
+									<img
+										className='block lg:hidden h-8 w-auto'
+										src='/logo.png'
+										alt='Workflow'
+									/>
+									<img
+										className='hidden lg:block h-10 w-auto'
+										src='/logo.png'
+										alt='Workflow'
+									/>
+								</Link>
 							</div>
 							<div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
 								<div className='hidden sm:block md:mx-auto sm:ml-6'>
@@ -93,38 +95,26 @@ export default function Example() {
 											<Menu.Items className='origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none'>
 												<Menu.Item>
 													{({ active }) => (
-														<a
-															href='/'
+														<Link
+															to={"terms_of_service"}
 															className={classNames(
 																active ? 'bg-gray-100' : '',
 																'block px-4 py-2 text-sm text-gray-700'
 															)}>
-															button 1
-														</a>
+															Terms of Service
+														</Link>
 													)}
 												</Menu.Item>
 												<Menu.Item>
 													{({ active }) => (
-														<a
-															href='/'
+														<Link
+															to={"cookie_policy"}
 															className={classNames(
 																active ? 'bg-gray-100' : '',
 																'block px-4 py-2 text-sm text-gray-700'
 															)}>
-															button 2
-														</a>
-													)}
-												</Menu.Item>
-												<Menu.Item>
-													{({ active }) => (
-														<a
-															href='/'
-															className={classNames(
-																active ? 'bg-gray-100' : '',
-																'block px-4 py-2 text-sm text-gray-700'
-															)}>
-															button 3
-														</a>
+															Cookie Policy
+														</Link>
 													)}
 												</Menu.Item>
 											</Menu.Items>
@@ -152,13 +142,13 @@ export default function Example() {
 									{item.name}
 								</Disclosure.Button>
 							))}
-							<select className='px-3 py-2' name='' id=''>
+							{/* <select className='px-3 py-2' name='' id=''>
 								<option value='' selected>
 									Support
 								</option>
-								<option value=''>Button</option>
-								<option value=''>Button</option>
-							</select>
+								<option value=''><Link to={"terms_of_service"}>Terms of Service</Link></option>
+								<Link to={"cookie_policy"}><option value=''>Cookie Policy</option></Link>
+							</select> */}
 						</div>
 					</Disclosure.Panel>
 				</>
