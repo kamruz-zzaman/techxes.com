@@ -7,8 +7,8 @@ const CookiePolicy = () => {
     return (
         <section className='container'>
             <div>
-                <div className='flex justify-center'>
-                    <img width={"200px"} src="./img/termsandcookies.png" alt="" />
+                <div className='flex justify-center mb-6'>
+                    <img width={"200px"} src="./img/termsandcookies.svg" alt="" />
                 </div>
                 <p className='text-center font-bold text-2xl'>Cookie Policy</p>
                 <div className='md:mx-36 mb-10 md:mb-32 mt-10'>
