@@ -9,7 +9,7 @@ const Career = () => {
 	const handleCareerForm = e => {
 		e.preventDefault();
 		setLoading(true);
-		const data = {
+		const info = {
 			data: {
 				name: e.target.Name.value,
 				mail: e.target.mail.value,
@@ -17,8 +17,9 @@ const Career = () => {
 				phone: e.target.phone.value,
 			},
 		};
+		console.log(info);
 		axios
-			.post('https://techxes.herokuapp.com/api/careers', data)
+			.post('https://techxes.herokuapp.com/api/careers', info)
 			.then(res => {
 				setLoading(false);
 				swal('Done!', 'Your application is submitted!', 'success');

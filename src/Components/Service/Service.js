@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Service = () => {
 	const [data, setData] = useState([]);
@@ -85,9 +86,9 @@ const Service = () => {
 						Join businesses that use to build their brands
 					</p>
 					<div className='flex justify-center items-center pb-10'>
-						<button className='px-5 py-2 bg-white font-bold rounded-md hover:bg-slate-100 mt-10'>
+						<Link to='/career' className='px-5 py-2 bg-white font-bold rounded-md hover:bg-slate-100 mt-10'>
 							Get Started Now
-						</button>
+						</Link>
 					</div>
 				</div>
 			</section>
