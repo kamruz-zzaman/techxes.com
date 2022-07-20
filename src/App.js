@@ -13,31 +13,31 @@ import CookiePolicy from './pages/CookiePolicy';
 import Home from './pages/Home';
 import Services from './pages/Services';
 function App() {
-	return (
-		<BrowserRouter>
-			<NavBar />
-			<HeroSection />
-			<Routes>
-				<Route path='/' element={<Home />} />
-				<Route path='/blogs' element={<Blogs />} />
-				<Route path='/services' element={<Services />} />
-				<Route path='/career' element={<Career />} />
-				<Route path='/blog/:id' element={<SingleBlog />} />
-				<Route path='/news/:id' element={<SingleNews />} />
-				<Route path='/service/:id' element={<SingleService />} />
-				<Route path='/terms_of_service' element={<TermsOfService />} />
-				<Route path='/cookie_policy' element={<CookiePolicy />} />
+  return (
+    <BrowserRouter>
+      <NavBar />
+      <HeroSection />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/blogs' element={<Blogs />} />
+        <Route path='/services' element={<Services />} />
+        <Route path='/career' element={<Career />} />
+        <Route path='/blog/:id' element={<SingleBlog />} />
+        <Route path='/news/:id' element={<SingleNews />} />
+        <Route path='/service/:id' element={<SingleService />} />
+        <Route path='/terms_of_service' element={<TermsOfService />} />
+        <Route path='/cookie_policy' element={<CookiePolicy />} />
 
-				<Route
-					path='*'
-					element={
-						<div className='text-3xl text-center my-8'>404 Page Not Found</div>
-					}
-				/>
-			</Routes>
-			<Footer />
-		</BrowserRouter>
-	);
+        <Route
+          path='*'
+          element={
+            <div className='text-3xl text-center my-8'>404 Page Not Found</div>
+          }
+        />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  );
 }
 
 export default App;

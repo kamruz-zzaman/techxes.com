@@ -17,7 +17,6 @@ const Career = () => {
 				phone: e.target.phone.value,
 			},
 		};
-		console.log(info);
 		axios
 			.post('https://techxes.herokuapp.com/api/careers', info)
 			.then(res => {
