@@ -6,18 +6,18 @@ import axios from 'axios';
 import swal from 'sweetalert';
 
 const Help = ({ open, setOpen }) => {
-  const handlemessege = e => {
+  const handleMessage = e => {
     e.preventDefault();
     const data = {
-      messages: {
-        messages: e.target.messages.value,
+      data: {
+        messages: e.target.messages.value
       }
     }
-    console.log(data);
     axios
       .post('https://techxes.herokuapp.com/api/supports', data)
       .then(res => {
-        swal('Done!', 'Your Messege is send!', 'success');
+        swal('Done!', 'We received your message! We will contact you in the shortest possible time.', 'success');
+        setOpen(false);
         e.target.reset();
       })
       .catch(err => {
@@ -41,7 +41,7 @@ const Help = ({ open, setOpen }) => {
         </Transition.Child>
 
         <div className="fixed z-10 inset-0 overflow-y-auto">
-          <div className="flex items-end sm:items-center justify-center mt-36 md:min-h-full p-4 text-center sm:p-0">
+          <div className="flex items-end sm:items-center justify-center mt-26 md:min-h-full p-4 text-center sm:p-0">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -56,9 +56,9 @@ const Help = ({ open, setOpen }) => {
                   <div className='text-center text-2xl font-bold mb-4'>
                     Help
                   </div>
-                  <form onSubmit={handlemessege} action="">
+                  <form onSubmit={handleMessage} action="">
                     <div className='flex justify-center'>
-                      <textarea className='rounded-lg px-2 pt-2' placeholder='Comments' name="messages" id="" cols="30" rows="8"></textarea>
+                      <textarea className='rounded-lg px-2 pt-2' placeholder='Type your message here...' name="messages" id="" cols="30" rows="8"></textarea>
                     </div>
                     <div className='flex justify-center'>
                       <button className='bg-indigo-600 text-white px-4 py-2 rounded-lg my-4' type="submit">Submit</button>
